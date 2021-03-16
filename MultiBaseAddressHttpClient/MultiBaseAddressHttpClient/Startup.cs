@@ -22,17 +22,21 @@ namespace MultiBaseAddressHttpClient
         {
 
             services.AddScoped<CallApiService>();
-
+            //services.AddScoped<HttpRandomHandler>();
             var httpClientsConfigs = Configuration.GetSection("HttpClientsConfigs").Get<HttpClientsConfigs>();
 
-            foreach (var item in httpClientsConfigs.HttpClientInfo)
-            {
-                services.AddHttpClient(item.Name, c =>
-                {
-                    c.BaseAddress = new Uri(item.BaseAddress);
-                    c.DefaultRequestHeaders.Add("Accept", "application/json");
-                });
-            }
+            services.AddTransient(p => new HttpRandomHandler(httpClientsConfigs));
+
+            services.AddHttpClient<CallApiService>("name").AddHttpMessageHandler<HttpRandomHandler>();
+
+            //foreach (var item in httpClientsConfigs.HttpClientInfo)
+            //{
+            //    services.AddHttpClient(item.Name, c =>
+            //    {
+            //        c.BaseAddress = new Uri(item.BaseAddress);
+            //        c.DefaultRequestHeaders.Add("Accept", "application/json");
+            //    }).AddHttpMessageHandler<HttpRandomHandler>();
+            //}
 
             services.AddControllers();
             services.AddCors();

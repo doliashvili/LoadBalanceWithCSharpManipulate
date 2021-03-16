@@ -10,38 +10,26 @@ using System.Threading.Tasks;
 
 namespace MultiBaseAddressHttpClient
 {
-    public class HttpRandomClient
+    public class HttpRandomHandler : DelegatingHandler
     {
-        private readonly HttpClient _client;
-        private readonly IHttpClientFactory _clientFactory;
+        private HttpClient _client;
         private static readonly Dictionary<int, DateTime> BadClients = new Dictionary<int, DateTime>();
         private readonly HttpClientsConfigs _httpClientsConfig;
 
-        public HttpRandomClient(IHttpClientFactory clientFactory, HttpClientsConfigs httpClientsConfig)
+        public HttpRandomHandler(HttpClientsConfigs httpClientsConfig)
         {
-            _clientFactory = clientFactory;
             _httpClientsConfig = httpClientsConfig;
+        }
+
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+        {
             _client = GetRandomClient();
-        }
+            var absolutePath = request.RequestUri?.AbsolutePath.Remove(0, 1);
+            var requestUri = new Uri($"{_client.BaseAddress.AbsoluteUri}{absolutePath}");
 
-        public async Task<HttpResponseMessage> GetAsync(string urlWithOutBaseAddress, CancellationToken cancellationToken)
-        {
-            var requestUrl = $"{_client.BaseAddress}{urlWithOutBaseAddress}";
-            var response = await _client.GetAsync(requestUrl, cancellationToken);
+            request.RequestUri = requestUri;
 
-            EnsureSuccessStatus(response);
-
-            return response;
-        }
-
-        public async Task<HttpResponseMessage> SendAsync(HttpMethod httpMethod, string body, string urlWithOutBaseAddress, CancellationToken cancellationToken)
-        {
-            var requestUrl = $"{_client.BaseAddress}{urlWithOutBaseAddress}?body={body}";
-
-            var httpRequestMessage = new HttpRequestMessage(httpMethod, requestUrl);
-
-            var response = await _client.SendAsync(httpRequestMessage, cancellationToken);
-
+            var response = await base.SendAsync(request, cancellationToken);
             EnsureSuccessStatus(response);
 
             return response;
@@ -79,9 +67,9 @@ namespace MultiBaseAddressHttpClient
                 randomIndex = new Random().Next(0, _httpClientsConfig.HttpClientInfo.Count);
             } while (CheckBadClients(randomIndex));
 
-            var clientName = _httpClientsConfig.HttpClientInfo[randomIndex].Name;
+            var client = _httpClientsConfig.HttpClientInfo[randomIndex];
 
-            return _clientFactory.CreateClient(clientName);
+            return new HttpClient() { BaseAddress = new Uri(client.BaseAddress) };
         }
 
         private bool CheckBadClients(int randomIndex)
