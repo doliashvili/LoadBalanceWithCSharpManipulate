@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj": {}
+    "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj": {
+    "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj",
         "projectName": "MultiBaseAddressHttpClient",
-        "projectPath": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MultiBaseAddressHttpClient\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

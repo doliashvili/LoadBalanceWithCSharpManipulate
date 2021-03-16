@@ -199,11 +199,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp3\\MyApp3.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp3\\MyApp3.csproj",
       "projectName": "MyApp3",
-      "projectPath": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp3\\MyApp3.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp3\\MyApp3.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp3\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

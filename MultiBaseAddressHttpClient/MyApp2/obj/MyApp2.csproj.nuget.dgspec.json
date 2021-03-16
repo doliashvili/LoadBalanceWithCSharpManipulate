@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj": {}
+    "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj": {
+    "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj",
         "projectName": "MyApp2",
-        "projectPath": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp2\\MyApp2.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp2\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

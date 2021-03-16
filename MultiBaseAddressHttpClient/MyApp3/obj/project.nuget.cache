@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "htv2rf55LOrBxLNnXHsjtvDQNRZjQqBKCO73qycAcN618PYtipfOrWxfkIvbBCYUrrd+hnkoScxjl0bMCS4ssw==",
+  "dgSpecHash": "ujd7JVQlRNvApFocwWbBMl2VzgdUHN82fSYPsoNvw+pjs04WPFGvTYmuA1pY0NPi8V7WU4iI4B/JLlqFfXZSzw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\source\\repos\\MultiBaseAddressHttpClient\\MyApp3\\MyApp3.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\TestApp\\LoadBalanceWithCSharpManipulate\\MultiBaseAddressHttpClient\\MyApp3\\MyApp3.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
