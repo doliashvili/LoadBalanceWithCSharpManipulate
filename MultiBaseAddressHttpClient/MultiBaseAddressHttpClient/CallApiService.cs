@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -23,7 +24,12 @@ namespace MultiBaseAddressHttpClient
 
         public async Task<string> GetInfo()
         {
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
             var response = await _httpRandomClient.GetAsync("WeatherForecast", default);
+            stopwatch.Stop();
+
+            Console.WriteLine(stopwatch.Elapsed);
 
             return await response.Content.ReadAsStringAsync();
         }
